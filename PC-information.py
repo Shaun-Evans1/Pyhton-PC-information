@@ -1,0 +1,43 @@
+from subprocess import getoutput
+import os
+
+
+
+
+
+username = os.getlogin()    # Fetch username
+file = open(f'C:\\Users\\{username}\\Desktop\\PC info.txt','w')
+
+file.write("Computer Information")
+
+file.write("\n")
+file.write("\n")
+(getoutput('systeminfo'))
+file.write(getoutput('systeminfo'))
+
+file.write("\n")
+file.write("\n")
+file.write("\n")
+file.write("\n")
+(getoutput('ipconfig /all'))
+file.write(getoutput('ipconfig /all'))
+file.write("\n")
+
+
+file.write("\n")
+file.write("\n")
+file.write("\n")
+file.write("\n")
+file.write("\n")
+file.write("\n")
+file.write("\n")
+file.write("Hard drive information")
+file.write("\n")
+(getoutput('wmic diskdrive list brief/format:list'))
+file.write(getoutput('wmic diskdrive list brief/format:list'))
+(getoutput('wmic logicaldisk get caption, description, drivetype, freespace, size, volumename, volumeserialnumber'))
+file.write(getoutput('wmic logicaldisk get caption, description, drivetype, freespace, size, volumename, volumeserialnumber'))
+file.write("\n")
+
+
+file.close()
