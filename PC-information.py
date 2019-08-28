@@ -12,6 +12,7 @@ file.write("Computer Information")
 
 file.write("\n")
 file.write("\n")
+file.write("\n")
 (getoutput('systeminfo'))
 file.write(getoutput('systeminfo'))
 
